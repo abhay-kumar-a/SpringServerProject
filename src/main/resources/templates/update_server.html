@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Server Management System</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <h1>
+        Update data into Server</h1>
+    <hr>
+    <h2>
+       Update data
+    </h2>
+    <form action="#" th:action="@{/server}" th:object ="${server}" method="POST">
+        <input type ="hidden" th:field="*{serverId}" />
+        <input type ="text" th:field ="*{serverId}"
+               placeholder="Server ID"   class="from-control mb-4 col-4">
+        <br>
+        <input type ="text" th:field ="*{serverName}"
+               placeholder="Server Name" class="from-control mb-4 col-4">
+        <br>
+        <input type ="text" th:field ="*{serverLanguage}"
+               placeholder="Server Language" class="from-control mb-4 col-4">
+        <br>
+        <input type ="text" th:field ="*{serverFramework}"
+               placeholder="Server Framework" class="from-control mb-4 col-4">
+        <br>
+        <button type="submit" class="btn btn-info col-2" style="background-color: rgb(209, 204, 231)"> <b> Submit </b> </button>
+
+    </form>
+
+    </hr>
+    <a th:href="@{/server}">Back to Server</a>
+</div>
+</body>
+</html>
