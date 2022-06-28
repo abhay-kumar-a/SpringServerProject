@@ -1,4 +1,4 @@
-# Swagger codegen
+# Task 2: Swagger codegen
 
 ## Rest API with Swagger
 
